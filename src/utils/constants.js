@@ -8,3 +8,5 @@ public class HelloWorld{
 
 
 `;
+
+export const COMPILER_ENDPOINT = "http://localhost:3000/compile";

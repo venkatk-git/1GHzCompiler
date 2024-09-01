@@ -1,20 +1,24 @@
 // Dependencies
 import { Editor as MonacoEditor } from "@monaco-editor/react";
-import { INITIAL_CODE } from "../../utils/constants";
 
 // Constants & Helpers
 
 // eslint-disable-next-line react/prop-types
-function Compiler({ className }) {
+function Compiler({ code, setCode, className }) {
+  const handleCodeChange = (value) => {
+    setCode(value);
+  };
+
   return (
     <div
-      className={`h-[93vh] pt-1 text-[16px] border-r-2 border-gray-500 ${className}`}
+      className={`h-full pt-1 text-[16px] border-r-2 border-gray-500 ${className}`}
     >
       <MonacoEditor
         width="100%"
         height="100%"
         language="java"
-        value={INITIAL_CODE}
+        value={code}
+        onChange={handleCodeChange}
         theme="vs-dark"
         options={{
           selectOnLineNumbers: true,

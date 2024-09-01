@@ -8,6 +8,9 @@ export default {
       secondaryGray: "#2d2f34",
       "gray-500": "#4c4d4f",
     },
+    fontFamily: {
+      "output-font": ["Consolas", "Courier New", "monospace"],
+    },
   },
   plugins: [],
 };
