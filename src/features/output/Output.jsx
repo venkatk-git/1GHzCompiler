@@ -1,7 +1,8 @@
 import React from "react";
 
-function Output() {
-  return <div>Output</div>;
+// eslint-disable-next-line react/prop-types
+function Output({ className }) {
+  return <div className={`px-4 ${className}`}></div>;
 }
 
 export default Output;
